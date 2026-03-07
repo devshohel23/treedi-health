@@ -1,0 +1,56 @@
+/*
+====================================
+large Screen - Others
+====================================
+*/
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+
+
+}
+
+/*
+====================================
+Medium Screen - Others
+====================================
+*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .gap-x-40 {
+        row-gap: 50px;
+    }
+
+
+}
+
+/*
+====================================
+Small Screen - Tablate
+====================================
+*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .gap-x-40 {
+        row-gap: 45px;
+    }
+
+
+
+}
+
+/*
+====================================
+Xtra Small Screen - Small Mobile
+====================================
+*/
+@media screen and (max-width: 767px) {
+    .gap-x-40 {
+        row-gap: 38px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 575px) {
+
+
+}

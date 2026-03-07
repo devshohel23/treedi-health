@@ -296,6 +296,10 @@ body {
     color: #6b7280;
 }
 
+.home-inner ul li svg {
+    transform: translateY(3px);
+}
+
 .btn-primary {
     background-color: #000;
     color: #fff;
@@ -615,6 +619,10 @@ body {
     font-size: 14px;
     line-height: 163%;
     color: #d1d5db;
+}
+
+.footer-top-col01 ul li svg {
+    flex: 0 0 20px;
 }
 
 .footer-col2st {

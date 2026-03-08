@@ -199,7 +199,114 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 15px;
+    padding-block: 11px;
+}
+
+
+.nav-inner .logo img,
+.sidebar-header .logo img {
+    max-width: 26px;
+}
+
+.menu-right-comp {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* update code - 30% smaller */
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 6px 4px 0 4px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 8px;
+  pointer-events: none;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: var(--primaryColor);
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: var(--primaryColor);
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 3px;
+  color: #fff;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+/* main toggle size */
+input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 67px;
+  height: 32px;
+  border-radius: 4px;
+  background: #000;
+}
+
+/* background */
+input.check-toggle-round-flat + label:before,
+input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background: #000;
+  border-radius: 40px;
+}
+
+/* slider button */
+input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 7px;
+  bottom: 4px;
+  width: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: margin 0.2s;
+}
+
+/* checked move */
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 30px;
 }
 
 .humberger-menu button {
@@ -339,11 +446,7 @@ transform:translateY(-3.8px) rotate(-45deg);
     margin-bottom:20px;
 }
 
-
-
 /* Sidebar  */
-
-
 .home-inner h2 {
     font-weight: 700;
     font-size: 28px;
@@ -766,11 +869,3 @@ transform:translateY(-3.8px) rotate(-45deg);
     gap: 5px;
     justify-content: center;
 }
-
-
-.nav-inner .logo img,
-.sidebar-header .logo img {
-    max-width: 26px;
-}
-
-

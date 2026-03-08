@@ -10,23 +10,25 @@ document.addEventListener("DOMContentLoaded", function () {
 	const sidebarLinks = document.querySelectorAll("#sidebar a");
 
 	menuBtn.addEventListener("click", () => {
-		sidebar.classList.add("active");
-		overlay.classList.add("active");
+
+	sidebar.classList.toggle("active");
+	overlay.classList.toggle("active");
+	menuBtn.classList.toggle("active");
+
 	});
 
-	closeBtn.addEventListener("click", closeSidebar);
 	overlay.addEventListener("click", closeSidebar);
+	closeBtn.addEventListener("click", closeSidebar);
 
-	// Close sidebar when clicking any link
-	sidebarLinks.forEach(link => {
-		link.addEventListener("click", closeSidebar);
+	sidebarLinks.forEach(link=>{
+	link.addEventListener("click", closeSidebar);
 	});
 
 	function closeSidebar(){
-		sidebar.classList.remove("active");
-		overlay.classList.remove("active");
+	sidebar.classList.remove("active");
+	overlay.classList.remove("active");
+	menuBtn.classList.remove("active");
 	}
-
 
 
 	const faqItems = document.querySelectorAll(".faq-item");

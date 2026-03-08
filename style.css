@@ -816,3 +816,328 @@ body {
 .affordable-fea-gird .single-box .icon {
     margin-top: 0;
 }
+
+
+
+/*===== Privacy Policy Page Here =====*/
+
+.policy-hero {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background: #FCFCFD;
+}
+
+.policy-hero-back a {
+    padding: 4px 22px;
+    background: #e0e8f9;
+    border-radius: 38px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 244%;
+    color: #374151;
+}
+
+.policy-hero-matters {
+    margin-top: 30px;
+    padding: 8px 20px;
+    border-radius: 9999px;
+    background: rgba(74, 222, 128, 0.14);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.policy-hero-matters p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 153%;
+    color: #16a34a;
+}
+
+.policy-hero-content {
+    padding-top: 20px;
+}
+
+.policy-hero-content h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 114%;
+    color: #151c28;
+    /*! font-family: var(--roboto); */
+}
+
+.policy-hero-content p {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 175%;
+    color: #6a7181;
+}
+
+.policy-hero-items {
+    padding-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.policy-hero-box {
+    border: 1px solid #e1e4ea;
+    border-radius: 12px;
+    background: #fff;
+    padding: 18px;
+    text-align: center;
+}
+
+.policy-hero-box p {
+    font-size: 12px;
+    line-height: 142%;
+    text-align: center;
+    color: #151c28;
+}
+
+.policy-hero-box div {
+    background: #e0f5e2;
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.policy-content-box {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 30px 25px;
+    border: 1px solid #e1e4ea;
+    border-radius: 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.policy-content-box p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 174%;
+    color: #151c28;
+}
+
+.policy-content-box span {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 175%;
+    color: #6a7181;
+}
+
+.policy-items {
+    padding-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.policy-items-left {
+    background: #e0f5e2;
+    border-radius: 12px;
+    max-width: 40px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.policy-items-right h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 161%;
+    letter-spacing: -0.03em;
+    color: #151c28;
+}
+
+.policy-items-right-items {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 265px;
+}
+
+.policy-items-right-items p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 174%;
+    color: #6a7181;
+}
+
+.policy-items-right-items ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.policy-items-right-items ul li {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 176%;
+    color: #6a7181;
+    padding-left: 14px;
+}
+
+
+.policy-items-right-items ul li::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    display: block;
+    background: #6a7181;
+    border-radius: 50%;
+    left: 0;
+    top: 10px;
+}
+
+/*====== Terms of Service Page Here ======*/
+
+.terms-hero {
+    padding-top: 36px;
+    padding-bottom: 28px;
+    background: #FCFCFD;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 12px;
+}
+
+.terms-hero-icon {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.terms-hero-icon h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #16a34a;
+}
+
+.terms-hero-content {
+    padding-top: 20px;
+}
+
+.terms-hero-content h2 {
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 114%;
+	color: #151c28;
+	/*! font-family: var(--roboto); */
+}
+
+.terms-hero-content p {
+    padding-top: 12px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 168%;
+    color: #64748b;
+}
+
+.terms-items .policy-items-left i {
+    color: var(--primaryColor);
+}
+
+.terms-items-warning {
+    border: 1px solid #f7deba;
+    border-radius: 8px;
+    background: #fff7eb;
+    padding: 20px 13px;
+}
+
+.terms-items-warning {
+    display: flex;
+    gap: 7px;
+}
+
+.terms-items-warning p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 153%;
+    color: #7a541f;
+}
+
+.terms-items .policy-items-right-items {
+	max-width: 330px;
+}
+
+.terms-items .policy-items-right h2 {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 144%;
+    color: #020817;
+}
+
+.terms-service {
+    padding-bottom: 60px;
+    background: #FCFCFD;
+}
+
+.terms-items .policy-items-right-items ul li::after {
+    background: #16a34a;
+    height: 6px;
+    width: 6px;
+}
+
+.terms-items-extra {
+    display: flex;
+    gap: 12px;
+}
+
+.terms-items-extra p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 174%;
+    color: #020817;
+    margin-top: -5px;
+}
+
+.terms-items-emergency {
+    margin-top: 60px;
+    border: 1px solid #f0d1d1;
+    border-radius: 12px;
+    background: #fdf2f2;
+    padding: 28px 46px;
+    text-align: center;
+}
+
+.terms-items-emergency h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 154%;
+    text-align: center;
+    color: #020817;
+    padding: 6px 0;
+    font-family: var(--roboto);
+}
+
+.terms-items-emergency p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 152%;
+    text-align: center;
+    color: #64748b;
+}
+
+.terms-items-emergency p strong {
+    font-weight: 700;
+    color: #d92626;
+}

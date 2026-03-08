@@ -212,7 +212,7 @@ body {
 
 .nav-inner .logo img,
 .sidebar-header .logo img {
-    max-width: 25px;
+    max-width: 22px;
 }
 
 .menu-right-comp {
@@ -254,8 +254,8 @@ body {
 }
 
 .humberger-menu {
-    height: 10.5px;
-    width: 23px;
+    height: 9.5px;
+    width: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -263,7 +263,7 @@ body {
 }
 
 .humberger-menu span {
-    height: 2px;
+    height: 1px;
     width: 100%;
     background-color: #000;
     transition: all 0.35s ease;
@@ -275,11 +275,11 @@ body {
 
 /* ACTIVE STATE → X MARK */
 .humberger-menu.active span.line01 {
-  transform: translateY(2.3px) rotate(45deg);
+  transform: translateY(3px) rotate(45deg);
 }
 
 .humberger-menu.active span.line02 {
-  transform: translateY(-6.8px) rotate(-45deg);
+  transform: translateY(-5.8px) rotate(-45deg);
 }
 
 /* Sidebar */
@@ -381,8 +381,8 @@ body {
 .sidebar-menu a{
     color: #000;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 /* Header */
@@ -397,15 +397,24 @@ body {
     position: fixed;
     bottom: 30px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 40px);
     z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s ease;
 }
 
 .sticky-button a {
-    padding: 11px 30px;
-    font-size: 14px;
+    padding: 9px 24px;
+    font-size: 12px;
     background-color: #0000005d;
     backdrop-filter: blur(3px);
+}
+
+.sticky-button.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
 }
 
 /* Sidebar  */
@@ -435,22 +444,21 @@ body {
 }
 
 .home-inner ul li svg {
-    transform: translateY(3px);
+    transform: translateY(3.5px);
+    flex: 0 0 16px;
 }
 
 .btn-primary {
     background-color: #000;
     color: #fff;
     border-radius: 30px;
-    padding: 14px 25px;
-    font-size: 15px;
+    padding: 12px 28px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .btn-primary:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transform: translateY(-2px);
-    background-color: var(--primaryColor);
+    background-color: #6E6E6E;
 }
 
 .hero-banner {
@@ -487,7 +495,7 @@ body {
     text-align: center;
     flex: 0 0 26px;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 3px;
 }
 
@@ -550,7 +558,7 @@ body {
 
 .features-area .grid .single-box {
     border: 1px solid #ddd;
-    padding: 25px 12px;
+    padding: 22px 12px;
     border-radius: 10px;
 }
 
@@ -570,8 +578,8 @@ body {
 }
 
 .features-area .grid .single-box h3 {
-    font-size: 14px;
-    padding-top: 10px;
+    font-size: 15px;
+    padding-top: 12px;
     font-weight: 500;
     font-family: var(--poppins);
 }
@@ -645,7 +653,7 @@ body {
     height: 22px;
     width: 22px;
     flex: 0 0 22px;
-    line-height: 22px;
+    line-height: 21px;
 }
 
 .why-patients-area ul li p {
@@ -731,7 +739,7 @@ body {
 }
 
 .footer-area .footer-logo img {
-    max-width: 240px;
+    max-width: 32px;
 }
 
 .footer-top-col01 p {
@@ -739,7 +747,7 @@ body {
     font-size: 14px;
     line-height: 163%;
     color: #d1d5db;
-    padding-top: 15px;
+    padding-top: 24px;
 }
 
 .footer-top-col01 ul {
@@ -803,6 +811,10 @@ body {
     padding-top: 4px;
 }
 
+.footer-top-col01 ul li:first-child svg {
+    transform: translateY(4px);
+}
+
 .footer-top-col01 ul li a {
    color: #d1d5db;
 }
@@ -830,4 +842,12 @@ body {
     align-items: center;
     gap: 5px;
     justify-content: center;
+}
+
+.price-consultation img {
+    max-width: 28px !important;
+}
+
+.affordable-fea-gird .single-box .icon {
+    margin-top: 0;
 }

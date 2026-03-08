@@ -31,26 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 
-	const faqItems = document.querySelectorAll(".faq-item");
-
-		faqItems.forEach(item => {
-
-		const header = item.querySelector(".faq-header");
-
-		header.addEventListener("click", () => {
-
-		faqItems.forEach(el=>{
-		if(el !== item){
-		el.classList.remove("active");
-		}
-		});
-
-		item.classList.toggle("active");
-
-		});
-
-	});
-
 
 
 

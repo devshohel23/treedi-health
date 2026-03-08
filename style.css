@@ -154,15 +154,15 @@ input::-webkit-inner-spin-button {
     row-gap: 26px;
 }
 
-body {
+/* body {
     background-color: #ddd;
     margin: 0;
-}
+} */
 
-/* body {
+body {
     background-color: #fff;
     margin: 0;
-} */
+}
 
 
 *,
@@ -172,7 +172,6 @@ body {
 }
 
 /*======= header-area design =======*/
-
 .wrapper {
     background-color: #fff;
     max-width: 450px;
@@ -333,49 +332,11 @@ body {
 
 .sidebar-menu li {
     margin: 13px 0;
-    transform: translateY(12px);
     opacity: 0;
-    visibility: hidden;
-    transition: 0.5s;
-    transition-delay: 0.2s;
 }
 
 .sidebar.active .sidebar-menu li {
-    transform: translateY(0);
-     opacity: 1;
-    visibility: visible;
-}
-
-.sidebar-menu li:nth-child(2) {
-   transition-delay: 0.10s;
-}
-
-.sidebar-menu li:nth-child(3) {
-   transition-delay: 0.16s;
-}
-
-.sidebar-menu li:nth-child(4) {
-   transition-delay: 0.24s;
-}
-
-.sidebar-menu li:nth-child(5) {
-   transition-delay: 0.32s;
-}
-
-.sidebar-menu li:nth-child(6) {
-   transition-delay: 0.40s;
-}
-
-.sidebar-menu li:nth-child(7) {
-   transition-delay: 0.48s;
-}
-
-.sidebar-menu li:nth-child(8) {
-   transition-delay: 0.56s;
-}
-
-.sidebar-menu li:nth-child(9) {
-   transition-delay: 0.64s;
+    opacity: 1;
 }
 
 .sidebar-menu a{
@@ -420,7 +381,7 @@ body {
 /* Sidebar  */
 .home-inner h2 {
     font-weight: 700;
-    font-size: 28px;
+    font-size: 29px;
     line-height: 121%;
     padding-bottom: 30px;
     padding-top: 112px;
@@ -458,12 +419,16 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #6E6E6E;
+    background-color: #363636;
 }
 
 .hero-banner {
     padding-top: 45px;
     padding-bottom: 20px;
+}
+
+.hero-banner img {
+    border-radius: 12px;
 }
 
 .bg-sec {
@@ -806,13 +771,13 @@ body {
     margin-top: -4px;
 }
 
-.footer-top-col01 ul li:first-child {
-    align-items: flex-start;
+.footer-top-lists ul li:first-child {
+    align-items: flex-start !important;
     padding-top: 4px;
 }
 
-.footer-top-col01 ul li:first-child svg {
-    transform: translateY(4px);
+.footer-top-lists ul li:first-child svg {
+    transform: translateY(5.5px);
 }
 
 .footer-top-col01 ul li a {

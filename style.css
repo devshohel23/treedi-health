@@ -411,7 +411,7 @@ body {
     background-color: #000;
     color: #fff;
     border-radius: 30px;
-    padding: 13px 28px;
+    padding: 12px 28px;
     font-size: 14px;
     font-weight: 600;
     font-family: var(--poppins);
@@ -1185,7 +1185,6 @@ footer {
 }
 
 
-
 body.treedi-lock {
     overflow: hidden;
 }
@@ -1216,22 +1215,54 @@ body.treedi-lock {
     width: 100%;
     background: #fff;
     border-radius: 16px 16px 0 0;
-    padding: 25px 20px;
+    padding: 20px 16px;
     z-index: 9999;
     transition: .4s;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
 }
+
 
 .treedi-consult-popup.active {
     bottom: 0;
 }
 
-
 .treedi-step-box {
-    background: #eaf3ed;
+    background: #f4faf2d0;
     padding: 15px 22px;
     border-radius: 12px;
 }
 
+.treedi-step-box h3 {
+    font-size: 17px;
+    font-family: var(--space-grotesk);
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.treedi-step-box ul li:after {
+    background-color: #979494 !important;
+}
+
+.treedi-step-box .learn-more a {
+    color: #000;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.treedi-step-box {
+    position: relative;
+}
+
+.treedi-step-box .question-mark {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    max-width: 16px;
+}
 
 .treedi-progress {
     height: 8px;
@@ -1244,26 +1275,17 @@ body.treedi-lock {
 .treedi-progress span {
     display: block;
     height: 100%;
-    width: 33%;
-    background: var(--primaryColor);
+    width: 100%;
+    background: #000;
     border-radius: 20px;
     transition: .3s;
 }
 
-
 .treedi-step-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 12px;
-}
-
-.treedi-step {
-    display: none;
-}
-
-.treedi-step.active {
-    display: block;
+    margin-bottom: 36px;
 }
 
 /* Swipe button */
@@ -1277,10 +1299,9 @@ body.treedi-lock {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 20px;
     overflow: hidden;
+    margin-top: auto;
 }
-
 
 .treedi-swipe-handle {
     position: absolute;
@@ -1299,28 +1320,27 @@ body.treedi-lock {
 .treedi-swipe-handle img {
 	width: 26px;
 }
-/* Chat */
 
+/* Chat */
 .treedi-chatbox {
     position: fixed;
     bottom: -100%;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: calc(100vh - 70px);
     background: #fff;
     z-index: 9999;
-    border-radius: 16px 16px 0 0;
     transition: .4s;
+    border-radius: 16px 16px 0 0;
 }
 
 .treedi-chatbox.active {
     bottom: 0;
 }
 
-
 .treedi-swipe-text {
     position: absolute;
-    left: 70px;
+    left: 82px;
     white-space: nowrap;
     transition: transform .15s linear, opacity .15s linear;
 }
@@ -1333,75 +1353,40 @@ body.treedi-lock {
     overflow: hidden;
 }
 
-.treedi-sld-arrow {
-    position: absolute;
-    top: 46%;
-    transform: translateY(-50%);
-    left: 12px;
-    height: 20px;
-    width: 20px;
-    background-color: var(--primaryColor);
-    color: #fff;
-    font-size: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.treedi-sld-arrow.treedi-next {
-    right: 12px;
-    left: auto;
-}
-
-.treedi-step h3 {
-    font-size: 18px;
-    font-family: var(--space-grotesk);
-    padding-bottom: 8px;
-    font-weight: 700;
-}
-
 .treedi-step p {
     font-size: 14px;
 }
 
 .treedi-step-header div {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .mb-0 {
     margin-bottom: 0 !important;
 }
 
-.treedi-step .treedi-check {
+.treedi-check-wp {
     display: flex;
     align-items: flex-start;
-    gap: 4px;
+    gap: 8px;
     padding-top: 14px;
     font-size: 13px;
     padding-bottom: 14px;
     line-height: 150%;
 }
 
-.treedi-step .treedi-check .input {
-    accent-color: var(--primaryColor);
-    transform: translateY(0px);
+.treedi-check-wp .input {
+    accent-color: #000;
+    transform: translateY(3px);
     height: 15px;
     width: 15px;
     flex: 0 0 15px;
-}
-
-.treedi-step .button a {
-	padding: 7px 21px;
-	font-size: 13px;
-	background-color: var(--primaryColor);
-	color: #fff;
-	border-radius: 25px;
+    margin: 0;
 }
 
 .treedi-chatbox {
-    padding: 20px 20px;
+    padding: 20px 16px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -1410,7 +1395,6 @@ body.treedi-lock {
 
 .treedi-chat-header {
     text-align: center;
-    position: relative;
     font-size: 14px;
     font-weight: 600;
     color: #000;
@@ -1418,40 +1402,31 @@ body.treedi-lock {
     width: 100%;
 }
 
-.treedi-chat-header:after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 2px;
-    position: absolute;
-    bottom: -9px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #000;
-    border-radius: 10px;
-}
-
 .treedi-chat-input {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
     margin-top: auto;
 }
 
 .treedi-chat-input .chat-input-text {
-    padding-right: 10px;
+    padding-left: 18px;
+    padding-right: 14px;
     font-family: var(--poppins);
     height: 100%;
     width: 100%;
     font-size: 13px;
-    color: #111827;
-    padding-left: 0;
+    color: #5f6061;
+}
+
+.treedi-chat-input .chat-input-wrapper input::placeholder {
+    color: #5f6061;
 }
 
 .treedi-chat-input button {
-    height: 46px;
-    width: 46px;
-    flex: 0 0 46px;
+    height: 38px;
+    width: 38px;
+    flex: 0 0 38px;
     background-color: #000;
     border-radius: 50%;
     display: flex;
@@ -1464,22 +1439,22 @@ body.treedi-lock {
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 4px;
-    background: #fff;
     border-radius: 30px;
-    border: 1px solid #e5e7eb;
+    background-color: #F3F4F6;
     border-radius: 30px;
-    padding-left: 6px;
     width: 100%;
     height: 48px;
+    padding: 6px;
+    padding-left: 0;
 }
 
 .chat-file-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+     height: 46px;
+    width: 46px;
+    flex: 0 0 46px;
     border-radius: 50%;
     background: #f3f4f6;
     cursor: pointer;
@@ -1499,26 +1474,100 @@ body.treedi-lock {
     margin-right: auto;
 }
 
-.bot-chat-content ul {
+.list-content-wp ul {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
 }
 
-.bot-chat-content ul li {
+.list-content-wp ul li {
     position: relative;
     font-size: 13px;
     padding-left: 15px;
 }
 
-.bot-chat-content ul li:after {
+.list-content-wp ul li:after {
     content: "";
     display: block;
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     background-color: #ddd;
     border-radius: 50%;
     position: absolute;
     top: 8px;
     left: 0px;
+}
+
+.consult-modal-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+.treedi-chatbox .treedi-step-box {
+    border: 1px solid #d2ebc9;
+}
+
+.treedi-step-box .top-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.treedi-step-box .top-info .info-icon {
+ transform: translateY(1.3px);   
+}
+
+.treedi-connecting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.treedi-connecting.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.treedi-connecting-inner {
+    text-align: center;
+}
+
+.treedi-loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #e5e7eb;
+    border-top-color: var(--primaryColor);
+    animation: treediSpin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes treediSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.treedi-connecting p {
+    font-size: 14px;
+    color: #333;
 }

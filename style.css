@@ -189,7 +189,7 @@ body {
     width: 100%;
     max-width: 450px;
     border-bottom: 1px solid #ddd;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .nav-inner {
@@ -1197,7 +1197,7 @@ body.treedi-lock {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.55);
-    z-index: 9998;
+    z-index: 9999;
     opacity: 0;
     visibility: hidden;
     transition: .3s;

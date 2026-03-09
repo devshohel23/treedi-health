@@ -299,7 +299,7 @@ body {
     top: 75px;
     opacity: 1;
     visibility: visible;
-    height: calc(100% - 75px);
+    height: calc(100vh - 75px);
 }
 
 /* Overlay */
@@ -775,7 +775,7 @@ body {
 }
 
 .footer-top-lists ul li:first-child svg {
-    transform: translateY(5.5px);
+    transform: translateY(3.3px);
 }
 
 .footer-top-col01 ul li a {
@@ -820,7 +820,7 @@ body {
 /*===== Privacy Policy Page Here =====*/
 
 .policy-hero {
-    padding-top: 40px;
+    padding-top: 100px;
     padding-bottom: 60px;
     background: #FCFCFD;
 }
@@ -1008,7 +1008,7 @@ body {
 /*====== Terms of Service Page Here ======*/
 
 .terms-hero {
-    padding-top: 36px;
+    padding-top: 100px;
     padding-bottom: 28px;
     background: #FCFCFD;
     border-bottom: 1px solid #e2e8f0;
@@ -1149,4 +1149,22 @@ body {
     width: 100%;
     display: block;
     margin-bottom: -20px;
+}
+
+.font-semibold {
+    font-weight: 600 !important;
+}
+
+body.no-scroll{
+overflow: hidden;
+height: 100vh;
+}
+
+.single-box {
+    scroll-margin-top: 100px;
+}
+
+section,
+footer {
+    scroll-margin-top: 80px;
 }

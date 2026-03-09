@@ -1168,3 +1168,12 @@ section,
 footer {
     scroll-margin-top: 80px;
 }
+
+.medical-elit-banner {
+    padding-top: 30px;
+}
+
+.medical-elit-banner img {
+    border-radius: 12px;
+    width: 100%;
+}

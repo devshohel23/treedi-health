@@ -22,7 +22,6 @@ body {
     font-family: var(--poppins);
     font-size: 15px;
     font-weight: 400;    
-	background: var(--whiteColor);
 	color: #333333;	
 }
 
@@ -164,7 +163,6 @@ body {
     margin: 0;
 }
 
-
 *,
 *:after,
 *:before {
@@ -290,7 +288,7 @@ body {
     height: 0;
     background: #fff;
     color: #fff;
-    transition: 0.5s;
+    transition: 0.2s;
     z-index: 1001;
     padding: 20px;
     opacity: 0;
@@ -828,23 +826,23 @@ body {
 }
 
 .policy-hero-back a {
-    padding: 4px 22px;
-    background: #e0e8f9;
+    /*! padding: 4px 22px; */
+    /*! background: #e0e8f9; */
     border-radius: 38px;
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 9px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 244%;
+    line-height: 233%;
     color: #374151;
 }
 
 .policy-hero-matters {
     margin-top: 30px;
-    padding: 8px 20px;
+    /*! padding: 8px 20px; */
     border-radius: 9999px;
-    background: rgba(74, 222, 128, 0.14);
+    /*! background: rgba(74, 222, 128, 0.14); */
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -852,9 +850,9 @@ body {
 
 .policy-hero-matters p {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 153%;
-    color: #16a34a;
+    /*! color: #16a34a; */
 }
 
 .policy-hero-content {
@@ -914,8 +912,8 @@ body {
 .policy-content-box {
     margin-top: 40px;
     margin-bottom: 10px;
-    padding: 30px 25px;
-    border: 1px solid #e1e4ea;
+    /*! padding: 30px 25px; */
+    /*! border: 1px solid #e1e4ea; */
     border-radius: 16px;
     background: #fff;
     display: flex;
@@ -953,6 +951,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .policy-items-right h2 {
@@ -968,7 +967,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 265px;
+    /*! max-width: 265px; */
 }
 
 .policy-items-right-items p {
@@ -1020,7 +1019,7 @@ body {
     padding-top: 20px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
 }
 
 .terms-hero-icon h4 {
@@ -1029,7 +1028,7 @@ body {
     line-height: 143%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #16a34a;
+    /*! color: #16a34a; */
 }
 
 .terms-hero-content {
@@ -1092,7 +1091,7 @@ body {
 }
 
 .terms-items .policy-items-right-items ul li::after {
-    background: #16a34a;
+    background: #868686;
     height: 6px;
     width: 6px;
 }
@@ -1140,4 +1139,14 @@ body {
 .terms-items-emergency p strong {
     font-weight: 700;
     color: #d92626;
+}
+
+.features-grid .single-box .icon {
+    margin-top: 0;
+}
+
+.updt-pirt ul {
+    width: 100%;
+    display: block;
+    margin-bottom: -20px;
 }

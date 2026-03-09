@@ -189,7 +189,7 @@ body {
     width: 100%;
     max-width: 450px;
     border-bottom: 1px solid #ddd;
-    z-index: 99999999;
+    z-index: 999;
 }
 
 .nav-inner {
@@ -411,9 +411,10 @@ body {
     background-color: #000;
     color: #fff;
     border-radius: 30px;
-    padding: 12px 28px;
+    padding: 13px 28px;
     font-size: 14px;
     font-weight: 600;
+    font-family: var(--poppins);
 }
 
 .btn-primary:hover {
@@ -1181,4 +1182,343 @@ footer {
 .medical-elit-banner img {
     border-radius: 12px;
     width: 100%;
+}
+
+
+
+body.treedi-lock {
+    overflow: hidden;
+}
+
+.treedi-consult-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.treedi-consult-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.treedi-consult-popup {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    padding: 25px 20px;
+    z-index: 9999;
+    transition: .4s;
+}
+
+.treedi-consult-popup.active {
+    bottom: 0;
+}
+
+
+.treedi-step-box {
+    background: #eaf3ed;
+    padding: 15px 22px;
+    border-radius: 12px;
+}
+
+
+.treedi-progress {
+    height: 8px;
+    background: #ddd;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-top: 18px;
+}
+
+.treedi-progress span {
+    display: block;
+    height: 100%;
+    width: 33%;
+    background: var(--primaryColor);
+    border-radius: 20px;
+    transition: .3s;
+}
+
+
+.treedi-step-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.treedi-step {
+    display: none;
+}
+
+.treedi-step.active {
+    display: block;
+}
+
+/* Swipe button */
+
+.treedi-swipe-btn {
+    background: #000;
+    color: #fff;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+
+.treedi-swipe-handle {
+    position: absolute;
+    left: 4px;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+.treedi-swipe-handle img {
+	width: 26px;
+}
+/* Chat */
+
+.treedi-chatbox {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: #fff;
+    z-index: 9999;
+    border-radius: 16px 16px 0 0;
+    transition: .4s;
+}
+
+.treedi-chatbox.active {
+    bottom: 0;
+}
+
+
+.treedi-swipe-text {
+    position: absolute;
+    left: 70px;
+    white-space: nowrap;
+    transition: transform .15s linear, opacity .15s linear;
+}
+
+.treedi-swipe-handle {
+    z-index: 2;
+}
+
+.treedi-swipe-btn {
+    overflow: hidden;
+}
+
+.treedi-sld-arrow {
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    left: 12px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--primaryColor);
+    color: #fff;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.treedi-sld-arrow.treedi-next {
+    right: 12px;
+    left: auto;
+}
+
+.treedi-step h3 {
+    font-size: 18px;
+    font-family: var(--space-grotesk);
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+
+.treedi-step p {
+    font-size: 14px;
+}
+
+.treedi-step-header div {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.treedi-step .treedi-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    padding-top: 14px;
+    font-size: 13px;
+    padding-bottom: 14px;
+    line-height: 150%;
+}
+
+.treedi-step .treedi-check .input {
+    accent-color: var(--primaryColor);
+    transform: translateY(0px);
+    height: 15px;
+    width: 15px;
+    flex: 0 0 15px;
+}
+
+.treedi-step .button a {
+	padding: 7px 21px;
+	font-size: 13px;
+	background-color: var(--primaryColor);
+	color: #fff;
+	border-radius: 25px;
+}
+
+.treedi-chatbox {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.treedi-chat-header {
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    line-height: 100%;
+    width: 100%;
+}
+
+.treedi-chat-header:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.treedi-chat-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+}
+
+.treedi-chat-input .chat-input-text {
+    padding-right: 10px;
+    font-family: var(--poppins);
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+    color: #111827;
+    padding-left: 0;
+}
+
+.treedi-chat-input button {
+    height: 46px;
+    width: 46px;
+    flex: 0 0 46px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.chat-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px;
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 30px;
+    padding-left: 6px;
+    width: 100%;
+    height: 48px;
+}
+
+.chat-file-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.chat-input-text::placeholder {
+    color: #9ca3af;
+}
+
+.chat-content-wrap-col {
+    padding-top: 15px;
+}
+
+.chat-content-wrap-col .bot-chat-content {
+    max-width: 250px;
+    margin-right: auto;
+}
+
+.bot-chat-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bot-chat-content ul li {
+    position: relative;
+    font-size: 13px;
+    padding-left: 15px;
+}
+
+.bot-chat-content ul li:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 0px;
 }

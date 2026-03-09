@@ -117,7 +117,7 @@
 									</li>
 								</ul>
 								<div>
-									<a class="btn-primary" href="#">Get Started in Seconds</a>
+									<button id="treedi-consult-trigger" class="btn-primary">Get Started in Seconds</button>
 								</div>
 							</div>
 
@@ -1408,13 +1408,147 @@
 			</footer>
 			<!-- footer area -->
 		</main>
-	
+
+
+		<!-- Overlay -->
+		<div class="treedi-consult-overlay"></div>
+
+
+		<!-- Consultation Popup -->
+		<div class="treedi-consult-popup">
+
+
+
+			<div class="treedi-step-header">
+				<div>Your turn (<span id="treedi-step-number">1</span>)</div>
+			</div>
+
+			<div class="treedi-step-box">
+
+				<div class="treedi-step-header mb-0">
+				<button class="treedi-prev treedi-sld-arrow">
+					<i class="fa-solid fa-chevron-left"></i>
+				</button>
+				<button class="treedi-next treedi-sld-arrow">
+					<i class="fa-solid fa-chevron-right"></i>
+				</button>
+			</div>
+
+				
+
+				<div class="treedi-steps">
+
+					<!-- STEP 1 -->
+					<div class="treedi-step active">
+
+						<h3>Your Consultation</h3>
+
+						<p>You are about to chat with a medical assistant who will collect your medical information.</p>
+
+						<p>Please answer honestly and respond promptly. The chat will close after 2 minutes of inactivity.</p>
+
+						<p>This service is intended for patients who genuinely need medical care.</p>
+
+					</div>
+
+
+
+					<!-- STEP 2 -->
+					<div class="treedi-step">
+
+						<h3>Platform Usage Notice</h3>
+
+						<p>This service is intended for patients who genuinely need medical care. Consultation capacity is limited, and misuse of the platform may prevent other patients from receiving care.</p>
+
+						<p>Treedi may use technical information, including IP address and device data, to detect abuse.</p>
+
+						<p>Misuse of the platform may result in a permanent lifetime ban and additional actions where permitted by law.</p>
+
+					</div>
+
+
+					<!-- STEP 3 -->
+					<div class="treedi-step">
+
+						<h3>Consultation Fee & Confirmation</h3>
+
+						<p>The consultation fee is $49.99, payable after the consultation and before prescriptions or medical documents are issued.</p>
+
+						<label class="treedi-check">
+							<input class="input" id="treedi-check" type="checkbox">
+							<label for="treedi-check">I confirm the information I provide is accurate and truthful.</label>
+						</label>
+
+						<div class="button">
+							<a href="#">Learn more</a>
+						</div>
+
+					</div>
+
+					<div class="treedi-progress">
+						<span></span>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="treedi-swipe-btn">
+				<div class="treedi-swipe-handle">
+					<img src="images/right-arrow.svg" alt="">
+				</div>
+
+				<span class="treedi-swipe-text">
+					Swipe to start consultation
+				</span>
+			</div>
+
+		</div>
+
+		<!-- Chat -->
+		<div class="treedi-chatbox">
+			<div class="treedi-chat-header">
+				<span>Consultation Chat</span>
+			</div>
+
+			<div class="chat-content-wrap-col">
+				<div class="bot-chat-content">
+					<ul>
+						<li>You may securely send photos or videos if needed</li>
+						<li>Your identity will be confirmed under your name</li>
+						<li>All files are encrypted and only accessible to the physician and medical assistant</li>
+						<li>After review, complete the $49.99 payment</li>
+						<li>You will receive your prescription or medical requisitions by email within 1 hour</li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class="treedi-chat-input">
+				<div class="chat-input-wrapper">
+
+					<label class="chat-file-btn">
+						<svg width="16" height="16" viewBox="0 0 14 14" fill="none">
+							<path d="M13.5 6.75C13.5 6.89918 13.4407 7.04226 13.3352 7.14775C13.2298 7.25324 13.0867 7.3125 12.9375 7.3125H7.3125V12.9375C7.3125 13.0867 7.25324 13.2298 7.14775 13.3352C7.04226 13.4407 6.89918 13.5 6.75 13.5C6.60082 13.5 6.45774 13.4407 6.35225 13.3352C6.24676 13.2298 6.1875 13.0867 6.1875 12.9375V7.3125H0.5625C0.413316 7.3125 0.270242 7.25324 0.164753 7.14775C0.0592633 7.04226 0 6.89918 0 6.75C0 6.60082 0.0592633 6.45774 0.164753 6.35225C0.270242 6.24676 0.413316 6.1875 0.5625 6.1875H6.1875V0.5625C6.1875 0.413316 6.24676 0.270242 6.35225 0.164753C6.45774 0.0592633 6.60082 0 6.75 0C6.89918 0 7.04226 0.0592633 7.14775 0.164753C7.25324 0.270242 7.3125 0.413316 7.3125 0.5625V6.1875H12.9375C13.0867 6.1875 13.2298 6.24676 13.3352 6.35225C13.4407 6.45774 13.5 6.60082 13.5 6.75Z" fill="#6B7280"/>
+						</svg>
+
+						<input type="file" hidden>
+					</label>
+
+					<input class="chat-input-text" type="text" placeholder="Chat here">
+				</div>
+
+				<button>
+					<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M16.1628 8.5538C16.1627 8.33381 16.104 8.11782 15.9927 7.92807C15.8814 7.73832 15.7215 7.58168 15.5295 7.47427L15.5213 7.46607L1.8396 0.154355C1.62008 0.0330582 1.36888 -0.0186719 1.1193 0.00602121C0.869714 0.0307143 0.633525 0.130664 0.442029 0.292626C0.250534 0.454588 0.112773 0.670915 0.0470022 0.91294C-0.0187683 1.15497 -0.00944314 1.41126 0.0737416 1.64787L2.45593 8.5538L0.0731956 15.4537C-0.00646667 15.6739 -0.0214554 15.9122 0.0300022 16.1407C0.0814584 16.3691 0.197211 16.578 0.363586 16.7427C0.388742 16.7679 0.414992 16.7919 0.442335 16.8149C0.63322 16.9772 0.869175 17.0772 1.11854 17.1015C1.3679 17.1259 1.61875 17.0734 1.83741 16.9511L15.5169 9.63716C15.5197 9.63443 15.5224 9.63169 15.5251 9.62896C15.7173 9.52248 15.8776 9.36677 15.9897 9.17782C16.1018 8.98886 16.1615 8.77348 16.1628 8.5538ZM1.25171 15.8644L1.24132 15.8693L1.24515 15.8655L3.55515 9.17396L8.80514 9.17396C8.96644 9.16983 9.11974 9.10285 9.23237 8.98731C9.34499 8.87176 9.40802 8.71679 9.40802 8.55544C9.40802 8.39409 9.34499 8.23912 9.23237 8.12358C9.11974 8.00804 8.96644 7.94106 8.80514 7.93693L3.55515 7.93693L1.24351 1.24373L1.23968 1.2399L1.24733 1.24756L14.9247 8.5538L1.25171 15.8644Z" fill="white"/>
+					</svg>
+				</button>
+			</div>
+		</div>
 
 
 		<!-- Custom jQuery -->
 		<script src="js/scripts.js"></script>
-
-
 
 		<script>
 			const faqItems = document.querySelectorAll(".faq-item");
@@ -1449,8 +1583,143 @@
 				}else{
 					stickyBtn.classList.remove("active");
 				}
+			});
+
+
+			const popup = document.querySelector(".treedi-consult-popup");
+			const overlay = document.querySelector(".treedi-consult-overlay");
+			const trigger = document.getElementById("treedi-consult-trigger");
+
+			const steps = document.querySelectorAll(".treedi-step");
+			const progress = document.querySelector(".treedi-progress span");
+			const stepNumber = document.getElementById("treedi-step-number");
+
+			const prevBtn = document.querySelector(".treedi-prev");
+			const nextBtn = document.querySelector(".treedi-next");
+
+			const swipe = document.querySelector(".treedi-swipe-handle");
+			const swipeBtn = document.querySelector(".treedi-swipe-btn");
+
+			const chatbox = document.querySelector(".treedi-chatbox");
+			const swipeText = document.querySelector(".treedi-swipe-text");
+
+			let step = 0;
+			let startX = 0;
+			let currentX = 0;
+
+			/* OPEN POPUP */
+			trigger.addEventListener("click",()=>{
+
+			popup.classList.add("active");
+			overlay.classList.add("active");
+
+			document.body.classList.add("treedi-lock");
+
+			updateStep();
 
 			});
+
+
+			/* UPDATE STEP */
+			function updateStep(){
+
+			steps.forEach(s=>s.classList.remove("active"));
+
+			steps[step].classList.add("active");
+
+			progress.style.width=((step+1)/steps.length*100)+"%";
+
+			stepNumber.innerText=step+1;
+
+			}
+
+			/* NEXT */
+			nextBtn.addEventListener("click",()=>{
+			if(step < steps.length-1){
+			step++;
+			updateStep();
+			}
+			});
+
+			/* PREVIOUS */
+
+			prevBtn.addEventListener("click",()=>{
+			if(step > 0){
+			step--;
+			updateStep();
+			}
+			});
+
+			/* SWIPE START */
+
+			swipe.addEventListener("touchstart",(e)=>{
+			startX = e.touches[0].clientX;
+			});
+
+			/* SWIPE MOVE */
+			swipe.addEventListener("touchmove",(e)=>{
+
+			let move = e.touches[0].clientX - startX;
+
+			let max = swipeBtn.offsetWidth - swipe.offsetWidth - 8;
+
+			if(move > 0 && move < max){
+
+			currentX = move;
+
+			swipe.style.transform = `translateX(${currentX}px)`;
+
+			/* slide text away */
+
+			swipeText.style.transform = `translateX(${currentX * -0.5}px)`;
+
+			let progress = move / max;
+
+			swipeText.style.opacity = 1 - progress;
+
+			}
+
+			});
+
+			/* SWIPE END */
+			swipe.addEventListener("touchend",(e)=>{
+
+			let max = swipeBtn.offsetWidth - swipe.offsetWidth - 8;
+
+			if(currentX > max * 0.6){
+
+			popup.classList.remove("active");
+
+			chatbox.classList.add("active");
+
+			overlay.classList.add("active");
+
+			document.body.classList.add("treedi-lock");
+
+			}
+
+			/* reset */
+			swipe.style.transform="translateX(0)";
+			swipeText.style.transform="translateX(0)";
+			swipeText.style.opacity="1";
+
+			currentX = 0;
+
+			});
+
+			/* OVERLAY CLICK CLOSE */
+
+			overlay.addEventListener("click",()=>{
+
+			popup.classList.remove("active");
+			chatbox.classList.remove("active");
+
+			overlay.classList.remove("active");
+
+			document.body.classList.remove("treedi-lock");
+
+			});
+
 
 		</script>
 		

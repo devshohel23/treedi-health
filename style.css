@@ -820,7 +820,7 @@ body {
 /*===== Privacy Policy Page Here =====*/
 
 .policy-hero {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 60px;
     background: #FCFCFD;
 }
@@ -836,6 +836,7 @@ body {
     font-size: 12px;
     line-height: 233%;
     color: #374151;
+    display: none;
 }
 
 .policy-hero-matters {
@@ -1008,7 +1009,7 @@ body {
 /*====== Terms of Service Page Here ======*/
 
 .terms-hero {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 28px;
     background: #FCFCFD;
     border-bottom: 1px solid #e2e8f0;
@@ -1110,7 +1111,7 @@ body {
 }
 
 .terms-items-emergency {
-    margin-top: 60px;
+    margin-top: 38px;
     border: 1px solid #f0d1d1;
     border-radius: 12px;
     background: #fdf2f2;

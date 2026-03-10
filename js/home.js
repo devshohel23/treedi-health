@@ -271,3 +271,37 @@ const faqItems = document.querySelectorAll(".faq-item");
 			window.addEventListener("resize", () => {
 			document.documentElement.style.zoom = "1";
 			});
+
+
+
+			// Handle input height when multipole text line in chat
+			// handle submit button action 
+			const textarea = document.querySelector(".chat-input-text");
+
+			textarea.addEventListener("input", function(){
+
+			this.style.height = "auto";
+
+			this.style.height = this.scrollHeight + "px";
+
+			});
+
+			const sendBtn = document.querySelector(".chat-send-btn");
+
+			textarea.addEventListener("input", function(){
+
+			let value = textarea.value.trim();
+
+			if(value.length > 0){
+
+			sendBtn.disabled = false;
+			sendBtn.classList.add("active");
+
+			}else{
+
+			sendBtn.disabled = true;
+			sendBtn.classList.remove("active");
+
+			}
+
+			});

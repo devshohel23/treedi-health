@@ -200,11 +200,11 @@ body {
 }
 
 .hightlight-text {
-    background-color: #000;
+    background-color: #f4f4f4;
     padding-block: 7px;
     text-align: center;
     font-size: 12px;
-    color: white;
+    color: #000;
 }
 
 .nav-inner .logo img,

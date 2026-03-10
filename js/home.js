@@ -282,9 +282,16 @@ const faqItems = document.querySelectorAll(".faq-item");
 
 			this.style.height = "auto";
 
-			this.style.height = this.scrollHeight + "px";
+			let newHeight = this.scrollHeight;
+
+			if(newHeight > 120){
+			newHeight = 120;
+			}
+
+			this.style.height = newHeight + "px";
 
 			});
+			
 
 			const sendBtn = document.querySelector(".chat-send-btn");
 

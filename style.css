@@ -1184,9 +1184,10 @@ footer {
     width: 100%;
 }
 
-
-body.treedi-lock {
-    overflow: hidden;
+body.treedi-lock{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
 }
 
 .treedi-consult-overlay {
@@ -1339,7 +1340,8 @@ body.treedi-lock {
 
 .treedi-swipe-text {
     position: absolute;
-    left: 82px;
+    left: 50%;
+    transform: translateX(-50%);
     white-space: nowrap;
     transition: transform .15s linear, opacity .15s linear;
 }
@@ -1569,4 +1571,8 @@ body.treedi-lock {
 .treedi-connecting p {
     font-size: 14px;
     color: #333;
+}
+
+html, body {
+  touch-action: pan-x pan-y;
 }

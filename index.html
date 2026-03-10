@@ -1566,9 +1566,6 @@
 				}
 			});
 
-
-
-
 						
 			const popup = document.querySelector(".treedi-consult-popup");
 			const overlay = document.querySelector(".treedi-consult-overlay");
@@ -1731,11 +1728,79 @@
 
 
 
+			// For Zoom issues 
+
+				/* Disable pinch zoom */
+				document.addEventListener('gesturestart', function (e) {
+					e.preventDefault();
+				});
+
+				document.addEventListener('gesturechange', function (e) {
+					e.preventDefault();
+				});
+
+				document.addEventListener('gestureend', function (e) {
+					e.preventDefault();
+				});
+
+				/* Disable double tap zoom */
+				let lastTouchEnd = 0;
+				document.addEventListener('touchend', function (event) {
+					const now = Date.now();
+					if (now - lastTouchEnd <= 300) {
+						event.preventDefault();
+					}
+					lastTouchEnd = now;
+				}, false);
+
+				/* Disable multi-touch pinch */
+				document.addEventListener('touchmove', function(event) {
+					if (event.scale !== 1) {
+						event.preventDefault();
+					}
+				}, { passive: false });
+
+				/* Prevent two finger zoom */
+				document.addEventListener('touchstart', function(event) {
+					if (event.touches.length > 1) {
+						event.preventDefault();
+					}
+				}, { passive: false });
+
+			// For Zoom issues 
+
+
+
+
+
+			// Body stop scrolling after modal show
+			let scrollPosition = 0;
+
+				function lockBody(){
+
+				scrollPosition = window.scrollY || window.pageYOffset;
+
+				document.body.style.top = `-${scrollPosition}px`;
+				document.body.classList.add("treedi-lock");
+
+				}
+
+				function unlockBody(){
+
+				const scrollY = document.body.style.top;
+
+				document.body.classList.remove("treedi-lock");
+				document.body.style.top = "";
+
+				window.scrollTo(0, parseInt(scrollY || "0") * -1);
+
+			}
+			// Body stop scrolling after modal show
+
 
 
 
 		</script>
-		
 
 	</body>
 </html>

@@ -57,28 +57,17 @@ const faqItems = document.querySelectorAll(".faq-item");
 			SCROLL LOCK
 			================================ */
 
-			let scrollPosition = 0;
+				function lockBody(){
 
-			function lockBody(){
+				document.body.classList.add("treedi-lock");
 
-			scrollPosition = window.scrollY || window.pageYOffset;
+				}
 
-			document.body.style.top = `-${scrollPosition}px`;
-			document.body.classList.add("treedi-lock");
+				function unlockBody(){
 
-			}
-
-			function unlockBody(){
-
-			const scrollY = document.body.style.top;
-
-			document.body.classList.remove("treedi-lock");
-			document.body.style.top = "";
-
-			window.scrollTo(0, parseInt(scrollY || "0") * -1);
+				document.body.classList.remove("treedi-lock");
 
 			}
-
 
 			/* ===============================
 			OPEN POPUP

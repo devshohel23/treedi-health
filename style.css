@@ -1188,6 +1188,7 @@ body.treedi-lock{
   position: fixed;
   overflow: hidden;
   width: 100%;
+  top: 0 !important;
 }
 
 .treedi-consult-overlay {

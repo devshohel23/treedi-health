@@ -40,7 +40,7 @@ const faqItems = document.querySelectorAll(".faq-item");
 
 			const popup = document.querySelector(".treedi-consult-popup");
 			const overlay = document.querySelector(".treedi-consult-overlay");
-			const trigger = document.getElementById("treedi-consult-trigger");
+			const triggers = document.querySelectorAll(".treedi-consult-trigger");
 			const closeBtns = document.querySelectorAll(".consult-modal-close");
 
 			const swipe = document.querySelector(".treedi-swipe-handle");
@@ -72,16 +72,16 @@ const faqItems = document.querySelectorAll(".faq-item");
 			/* ===============================
 			OPEN POPUP
 			================================ */
-
+			triggers.forEach(trigger=>{
 			trigger.addEventListener("click", () => {
 
-			popup.classList.add("active");
-			overlay.classList.add("active");
+				popup.classList.add("active");
+				overlay.classList.add("active");
 
-			lockBody();
+				lockBody();
 
+				});
 			});
-
 
 			/* ===============================
 			CLOSE MODAL

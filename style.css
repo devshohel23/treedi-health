@@ -1185,7 +1185,7 @@ footer {
 }
 
 body.treedi-lock{
-  /* position: fixed; */
+  position: fixed;
   overflow: hidden;
   width: 100%;
   top: 0 !important;
@@ -1303,6 +1303,7 @@ body.treedi-lock{
     position: relative;
     overflow: hidden;
     margin-top: auto;
+    margin-bottom: 8px;
 }
 
 .treedi-swipe-handle {

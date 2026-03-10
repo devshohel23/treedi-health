@@ -1210,7 +1210,6 @@ body.treedi-lock {
 
 .treedi-consult-popup {
     position: fixed;
-    bottom: -100%;
     left: 0;
     width: 100%;
     background: #fff;
@@ -1218,7 +1217,8 @@ body.treedi-lock {
     padding: 20px 16px;
     z-index: 9999;
     transition: .4s;
-    height: calc(100vh - 70px);
+    bottom: -180%;
+    height: calc(100vh - 180px);
     display: flex;
     flex-direction: column;
 }
@@ -1324,10 +1324,10 @@ body.treedi-lock {
 /* Chat */
 .treedi-chatbox {
     position: fixed;
-    bottom: -100%;
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    bottom: -180%;
+    height: calc(100vh - 180px);
     background: #fff;
     z-index: 9999;
     transition: .4s;

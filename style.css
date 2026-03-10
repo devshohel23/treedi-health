@@ -1207,7 +1207,6 @@ body.treedi-lock {
     visibility: visible;
 }
 
-
 .treedi-consult-popup {
     position: fixed;
     left: 0;
@@ -1218,7 +1217,7 @@ body.treedi-lock {
     z-index: 9999;
     transition: .4s;
     bottom: -180%;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 240px);
     display: flex;
     flex-direction: column;
 }

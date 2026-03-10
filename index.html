@@ -4,16 +4,13 @@
 		<!-- Meta setup -->
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="keywords" content="">
 		<meta name="decription" content="">
 		<!-- Title -->
 		<title>Title Here</title>
 		<!-- Fav Icon -->
 		<link rel="icon" href="images/favicon.png">	
-		<!-- Include Bootstrap -->
-		<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-		<!-- link font awesome -->
 		<link rel="stylesheet" href="css/font-awesome.css">
 		<!-- Main StyleSheet -->
 		<link rel="stylesheet" href="style.css">	
@@ -1461,7 +1458,7 @@
 				</div>
 
 				<span class="treedi-swipe-text">
-					Swipe to start consultation
+					Start secure consultation
 				</span>
 			</div>
 
@@ -1499,7 +1496,8 @@
 
 					<div class="treedi-loader"></div>
 
-					<p>Connecting you with a medical assistant…</p>
+					<p>Connecting you with a medical assistant... <br>
+						This may take a few minutes</p> 
 
 				</div>
 
@@ -1515,7 +1513,7 @@
 				</label>
 
 				<div class="chat-input-wrapper">
-					<input class="chat-input-text" type="text" placeholder="Start your consultation">
+					<input class="chat-input-text" type="text" placeholder="">
 
 					<button>
 						<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1569,7 +1567,7 @@
 			});
 
 
-			
+
 
 						
 			const popup = document.querySelector(".treedi-consult-popup");
@@ -1627,6 +1625,31 @@
 
 			overlay.addEventListener("click", closeModal);
 
+
+			const checkBox = document.getElementById("treedi-check");
+
+			/* disable swipe initially */
+
+			swipeBtn.style.opacity = "0.4";
+			swipeBtn.style.pointerEvents = "none";
+
+			/* enable swipe when checked */
+
+			checkBox.addEventListener("change", () => {
+
+			if(checkBox.checked){
+
+			swipeBtn.style.opacity = "1";
+			swipeBtn.style.pointerEvents = "auto";
+
+			}else{
+
+			swipeBtn.style.opacity = "0.4";
+			swipeBtn.style.pointerEvents = "none";
+
+			}
+
+			});
 
 
 			/* SWIPE START */
@@ -1704,6 +1727,12 @@
 			currentX = 0;
 
 			});
+
+
+
+
+
+
 
 		</script>
 		

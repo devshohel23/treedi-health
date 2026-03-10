@@ -1634,3 +1634,41 @@ html, body{
     font-size: 10px;
 }
 
+.new-chat-box {
+    padding: 10px 14px;
+    overflow: auto;
+}
+
+.new-chat-box-inner {
+    max-height: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.new-chat-box-user {
+    max-width: 240px;
+    margin-left: auto;
+    background: #fff;
+    border: 1px solid rgba(200, 200, 200, 0.47);
+    border-radius: 10px;
+    padding: 10px 16px;
+}
+
+.new-chat-box-user p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    color: #374151;
+}
+
+.new-chat-box-bot {
+    max-width: 320px;
+}
+
+.new-chat-box-bot p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    color: #374151;
+}

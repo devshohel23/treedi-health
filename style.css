@@ -4,11 +4,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 
 :root {
     --space-grotesk: "Space Grotesk", sans-serif;
     --roboto: "Roboto", sans-serif;
     --poppins: "Poppins", sans-serif;
+    --lato: "Lato", sans-serif;
     --primaryColor: #40BC6D;
     --whiteColor: #fff;
     --blackColor: #000;
@@ -1290,6 +1293,25 @@ body.treedi-lock{
     margin-bottom: 21px;
 }
 
+/* Chat */
+.treedi-chatbox {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    bottom: -180%;
+    height: calc(100vh - 40px);
+    height: calc(100dvh - 40px);
+    height: calc(100svh - 40px);
+    background: #fff;
+    z-index: 9999;
+    transition: .2s;
+    border-radius: 16px 16px 0 0;
+}
+
+.treedi-chatbox.active {
+    bottom: 0;
+}
+
 /* Swipe button */
 
 .treedi-swipe-btn {
@@ -1304,6 +1326,7 @@ body.treedi-lock{
     overflow: hidden;
     margin-top: auto;
     margin-bottom: 8px;
+    overflow: hidden;
 }
 
 .treedi-swipe-handle {
@@ -1324,25 +1347,6 @@ body.treedi-lock{
 	width: 26px;
 }
 
-/* Chat */
-.treedi-chatbox {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    bottom: -180%;
-    height: calc(100vh - 65px);
-    height: calc(100dvh - 65px);
-    height: calc(100svh - 65px);
-    background: #fff;
-    z-index: 9999;
-    transition: .2s;
-    border-radius: 16px 16px 0 0;
-}
-
-.treedi-chatbox.active {
-    bottom: 0;
-}
-
 .treedi-swipe-text {
     position:absolute;
     left:50%;
@@ -1359,12 +1363,17 @@ body.treedi-lock{
     max-width: 17px;
 }
 
-.treedi-swipe-handle {
-    z-index: 2;
+.treedi-swipe-handle{
+    will-change: transform, width;
+    touch-action: none;
 }
 
-.treedi-swipe-btn {
-    overflow: hidden;
+.treedi-swipe-btn{
+    touch-action: none;
+}
+
+.treedi-swipe-handle {
+    z-index: 2;
 }
 
 .treedi-step p {
@@ -1418,7 +1427,7 @@ body.treedi-lock{
 
 .treedi-chat-input .chat-input-text {
     padding-left: 41px;
-    padding-right: 25px;
+    padding-right: 45px;
     font-family: var(--poppins);
     height: 100%;
     width: 100%;
@@ -1635,6 +1644,10 @@ html, body{
     color: #525252;
     margin-bottom: -11px;
     padding-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
 .treedi-chatbox .treedi-step-box {
@@ -1677,7 +1690,7 @@ html, body{
 .new-chat-box-user p {
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 135%;
     color: #000;
 }
 
@@ -1686,9 +1699,9 @@ html, body{
 }
 
 .new-chat-box-bot p {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 135%;
     color: #000;
 }
 
@@ -1789,27 +1802,40 @@ html, body{
 }
 
 .new-chat-box {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: var(--lato) !important;
     font-size: 16px;
 }
 
 .treedi-chat-input .chat-input-text {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: var(--lato) !important;
     font-size: 16px;
 }
 
 .treedi-chat-inp-wrap .info-text {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+	font-family: var(--lato) !important;
 }
 
 .chat-file-btn {
 	position: absolute;
 	left: 19px;
 	bottom: 27px;
-	z-index: 9;
+	z-index: 999;
 }
 
 .treedi-chatbox .treedi-step-box .top-info {
    color: #000;
 }
+
+.treedi-step-box .font-semibold {
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
 

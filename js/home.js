@@ -128,68 +128,79 @@ const faqItems = document.querySelectorAll(".faq-item");
 
 			});
 
-
 			/* ===============================
-			SWIPE SYSTEM
+			SWIPE SYSTEM (SMOOTH FIX)
 			================================ */
 
 			let startX = 0;
 			let currentX = 0;
 			let maxMove = 0;
-			let raf = null;
+			let dragging = false;
 
 
 			/* SWIPE START */
 
-			swipe.addEventListener("touchstart",(e)=>{
+			swipe.addEventListener("touchstart", startSwipe, {passive:true});
+			swipe.addEventListener("mousedown", startSwipe);
 
-			startX = e.touches[0].clientX;
+			function startSwipe(e){
+
+			dragging = true;
+
+			startX = e.touches ? e.touches[0].clientX : e.clientX;
 
 			maxMove = swipeBtn.offsetWidth - swipe.offsetWidth - 8;
 
-			},{passive:true});
+			document.addEventListener("touchmove", moveSwipe, {passive:true});
+			document.addEventListener("mousemove", moveSwipe);
+
+			document.addEventListener("touchend", endSwipe);
+			document.addEventListener("mouseup", endSwipe);
+
+			}
 
 
 			/* SWIPE MOVE */
 
-			swipe.addEventListener("touchmove",(e)=>{
+			function moveSwipe(e){
 
-			let move = e.touches[0].clientX - startX;
+			if(!dragging) return;
+
+			let x = e.touches ? e.touches[0].clientX : e.clientX;
+
+			let move = x - startX;
+
+			/* clamp movement */
 
 			if(move < 0) move = 0;
 			if(move > maxMove) move = maxMove;
 
 			currentX = move;
 
-			if(!raf){
+			/* GPU smooth movement */
 
-			raf = requestAnimationFrame(updateSwipe);
+			swipe.style.transform = `translate3d(${move}px,0,0)`;
 
-			}
+			/* fade text */
 
-			},{passive:true});
-
-
-			function updateSwipe(){
-
-			swipe.style.transform = `translateX(${currentX}px)`;
-
-			let progress = currentX / maxMove;
-
-			swipeText.style.transform = `translate(calc(-50% - ${currentX * 0.3}px),0)`;
+			let progress = move / maxMove;
 
 			swipeText.style.opacity = 1 - progress;
-
-			raf = null;
 
 			}
 
 
 			/* SWIPE END */
 
-			swipe.addEventListener("touchend",()=>{
+			function endSwipe(){
 
-			if(currentX > maxMove * 0.6){
+			if(!dragging) return;
+
+			dragging = false;
+
+			/* success swipe */
+
+			if(currentX > maxMove * 0.65){
 
 			popup.classList.remove("active");
 
@@ -207,17 +218,24 @@ const faqItems = document.querySelectorAll(".faq-item");
 
 			}
 
-			/* reset */
 
-			swipe.style.transform = "translateX(0)";
-			swipeText.style.transform = "translate(-50%,0)";
+			/* reset swipe */
+
+			swipe.style.transform = "translate3d(0,0,0)";
 			swipeText.style.opacity = "1";
 
 			currentX = 0;
 
-			});
 
+			/* remove listeners */
 
+			document.removeEventListener("touchmove", moveSwipe);
+			document.removeEventListener("mousemove", moveSwipe);
+
+			document.removeEventListener("touchend", endSwipe);
+			document.removeEventListener("mouseup", endSwipe);
+
+			}
 
 
 			/* ===============================
@@ -263,6 +281,7 @@ const faqItems = document.querySelectorAll(".faq-item");
 
 
 
+
 			// Handle input height when multipole text line in chat
 			// handle submit button action 
 			const textarea = document.querySelector(".chat-input-text");
@@ -301,3 +320,10 @@ const faqItems = document.querySelectorAll(".faq-item");
 			}
 
 			});
+
+
+
+
+
+
+

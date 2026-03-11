@@ -128,79 +128,18 @@ const faqItems = document.querySelectorAll(".faq-item");
 
 			});
 
+
+
+			
+			
 			/* ===============================
-			SWIPE SYSTEM (SMOOTH FIX)
+			START CONSULT BUTTON (CLICK)
 			================================ */
 
-			let startX = 0;
-			let currentX = 0;
-			let maxMove = 0;
-			let dragging = false;
+			swipeBtn.addEventListener("click", startConsult);
+			swipe.addEventListener("click", startConsult);
 
-
-			/* SWIPE START */
-
-			swipe.addEventListener("touchstart", startSwipe, {passive:true});
-			swipe.addEventListener("mousedown", startSwipe);
-
-			function startSwipe(e){
-
-			dragging = true;
-
-			startX = e.touches ? e.touches[0].clientX : e.clientX;
-
-			maxMove = swipeBtn.offsetWidth - swipe.offsetWidth - 8;
-
-			document.addEventListener("touchmove", moveSwipe, {passive:true});
-			document.addEventListener("mousemove", moveSwipe);
-
-			document.addEventListener("touchend", endSwipe);
-			document.addEventListener("mouseup", endSwipe);
-
-			}
-
-
-			/* SWIPE MOVE */
-
-			function moveSwipe(e){
-
-			if(!dragging) return;
-
-			let x = e.touches ? e.touches[0].clientX : e.clientX;
-
-			let move = x - startX;
-
-			/* clamp movement */
-
-			if(move < 0) move = 0;
-			if(move > maxMove) move = maxMove;
-
-			currentX = move;
-
-			/* GPU smooth movement */
-
-			swipe.style.transform = `translate3d(${move}px,0,0)`;
-
-			/* fade text */
-
-			let progress = move / maxMove;
-
-			swipeText.style.opacity = 1 - progress;
-
-			}
-
-
-			/* SWIPE END */
-
-			function endSwipe(){
-
-			if(!dragging) return;
-
-			dragging = false;
-
-			/* success swipe */
-
-			if(currentX > maxMove * 0.65){
+			function startConsult(){
 
 			popup.classList.remove("active");
 
@@ -219,23 +158,8 @@ const faqItems = document.querySelectorAll(".faq-item");
 			}
 
 
-			/* reset swipe */
-
-			swipe.style.transform = "translate3d(0,0,0)";
-			swipeText.style.opacity = "1";
-
-			currentX = 0;
 
 
-			/* remove listeners */
-
-			document.removeEventListener("touchmove", moveSwipe);
-			document.removeEventListener("mousemove", moveSwipe);
-
-			document.removeEventListener("touchend", endSwipe);
-			document.removeEventListener("mouseup", endSwipe);
-
-			}
 
 
 			/* ===============================

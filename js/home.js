@@ -33,47 +33,42 @@ const faqItems = document.querySelectorAll(".faq-item");
 			});
 
 
+				/* ===============================
+				ELEMENTS
+				================================ */
 
-			/* ===============================
-			ELEMENTS
-			================================ */
+				const popup = document.querySelector(".treedi-consult-popup");
+				const overlay = document.querySelector(".treedi-consult-overlay");
+				const triggers = document.querySelectorAll(".treedi-consult-trigger");
+				const closeBtns = document.querySelectorAll(".consult-modal-close");
 
-			const popup = document.querySelector(".treedi-consult-popup");
-			const overlay = document.querySelector(".treedi-consult-overlay");
-			const triggers = document.querySelectorAll(".treedi-consult-trigger");
-			const closeBtns = document.querySelectorAll(".consult-modal-close");
+				const swipeBtn = document.querySelector(".treedi-swipe-btn");
 
-			const swipe = document.querySelector(".treedi-swipe-handle");
-			const swipeBtn = document.querySelector(".treedi-swipe-btn");
+				const chatbox = document.querySelector(".treedi-chatbox");
+				const connecting = document.querySelector(".treedi-connecting");
 
-			const chatbox = document.querySelector(".treedi-chatbox");
-			const swipeText = document.querySelector(".treedi-swipe-text");
-			const connecting = document.querySelector(".treedi-connecting");
-
-			const checkBox = document.getElementById("treedi-check");
+				const checkBox = document.getElementById("treedi-check");
 
 
-			/* ===============================
-			SCROLL LOCK
-			================================ */
+				/* ===============================
+				SCROLL LOCK
+				================================ */
 
 				function lockBody(){
-
 				document.body.classList.add("treedi-lock");
-
 				}
 
 				function unlockBody(){
-
 				document.body.classList.remove("treedi-lock");
+				}
 
-			}
 
-			/* ===============================
-			OPEN POPUP
-			================================ */
-			triggers.forEach(trigger=>{
-			trigger.addEventListener("click", () => {
+				/* ===============================
+				OPEN POPUP
+				================================ */
+
+				triggers.forEach(trigger=>{
+				trigger.addEventListener("click", () => {
 
 				popup.classList.add("active");
 				overlay.classList.add("active");
@@ -81,83 +76,92 @@ const faqItems = document.querySelectorAll(".faq-item");
 				lockBody();
 
 				});
-			});
-
-			/* ===============================
-			CLOSE MODAL
-			================================ */
-
-			function closeModal(){
-
-			popup.classList.remove("active");
-			chatbox.classList.remove("active");
-
-			overlay.classList.remove("active");
-
-			unlockBody();
-
-			}
-
-			closeBtns.forEach(btn=>{
-			btn.addEventListener("click", closeModal);
-			});
-
-			overlay.addEventListener("click", closeModal);
+				});
 
 
-			/* ===============================
-			CHECKBOX ENABLE SWIPE
-			================================ */
+				/* ===============================
+				CLOSE MODAL
+				================================ */
 
-			swipeBtn.style.opacity = "0.4";
-			swipeBtn.style.pointerEvents = "none";
+				function closeModal(){
 
-			checkBox.addEventListener("change", () => {
+				popup.classList.remove("active");
+				chatbox.classList.remove("active");
+				connecting.classList.remove("active");
 
-			if(checkBox.checked){
+				overlay.classList.remove("active");
 
-			swipeBtn.style.opacity = "1";
-			swipeBtn.style.pointerEvents = "auto";
+				unlockBody();
 
-			}else{
+				}
 
-			swipeBtn.style.opacity = "0.4";
-			swipeBtn.style.pointerEvents = "none";
+				closeBtns.forEach(btn=>{
+				btn.addEventListener("click", closeModal);
+				});
 
-			}
-
-			});
-
+				overlay.addEventListener("click", closeModal);
 
 
-			
-			
-			/* ===============================
-			START CONSULT BUTTON (CLICK)
-			================================ */
+				/* ===============================
+				ENABLE BUTTON AFTER CHECKBOX
+				================================ */
 
-			swipeBtn.addEventListener("click", startConsult);
-			swipe.addEventListener("click", startConsult);
+				swipeBtn.style.opacity = "0.4";
+				swipeBtn.style.pointerEvents = "none";
 
-			function startConsult(){
+				checkBox.addEventListener("change", () => {
 
-			popup.classList.remove("active");
+				if(checkBox.checked){
 
-			connecting.classList.add("active");
-			overlay.classList.add("active");
+				swipeBtn.style.opacity = "1";
+				swipeBtn.style.pointerEvents = "auto";
 
-			lockBody();
+				}else{
 
-			setTimeout(()=>{
+				swipeBtn.style.opacity = "0.4";
+				swipeBtn.style.pointerEvents = "none";
 
-			connecting.classList.remove("active");
-			chatbox.classList.add("active");
+				}
 
-			},2000);
-
-			}
+				});
 
 
+				/* ===============================
+				START CONSULT BUTTON (IOS SAFE)
+				================================ */
+
+				let consultStarted = false;
+
+				function startConsult(e){
+
+				if(consultStarted) return;
+
+				consultStarted = true;
+
+				popup.classList.remove("active");
+
+				connecting.classList.add("active");
+				overlay.classList.add("active");
+
+				lockBody();
+
+				setTimeout(()=>{
+
+				connecting.classList.remove("active");
+				chatbox.classList.add("active");
+
+				consultStarted = false;
+
+				},2000);
+
+				}
+
+
+				/* click support */
+				swipeBtn.addEventListener("click", startConsult);
+
+				/* iOS touch support */
+				swipeBtn.addEventListener("touchend", startConsult);
 
 
 
@@ -202,6 +206,8 @@ const faqItems = document.querySelectorAll(".faq-item");
 			window.addEventListener("resize", () => {
 			document.documentElement.style.zoom = "1";
 			});
+
+
 
 
 
